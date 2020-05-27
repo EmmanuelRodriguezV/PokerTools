@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="749.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.Controller">
+    <children>
+        <MenuBar prefHeight="58.0" prefWidth="1200.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Editar Reglas" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About Poker Tools" />
+                  <MenuItem mnemonicParsing="false" text="About Manual de reglas" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane>
+                    <children>
+                        <Label alignment="CENTER" layoutX="50.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Configuracion" textAlignment="CENTER" wrapText="false">
+                            <font>
+                                <Font size="18.0" fx:id="x1" />
+                            </font>
+                            <textFill>
+                                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+                            </textFill>
+                        </Label>
+                  <ComboBox fx:id="ComboSeleccionaFase" layoutX="19.0" layoutY="57.0" prefHeight="26.0" prefWidth="187.0" promptText="Selecciona Fase" />
+                  <ComboBox fx:id="ComboSeleccionalugar" layoutX="19.0" layoutY="93.0" prefHeight="26.0" prefWidth="187.0" promptText="Selecciona tu lugar" />
+                  <ComboBox fx:id="ComboCarta1" layoutX="19.0" layoutY="139.0" prefHeight="26.0" prefWidth="187.0" promptText="Card N°1" />
+                  <ComboBox fx:id="ComboCarta2" layoutX="20.0" layoutY="189.0" prefHeight="26.0" prefWidth="187.0" promptText="Card N°2" />
+                  <Button layoutX="35.0" layoutY="610.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="157.0" text="Calcular" />
+                  <Separator layoutX="14.0" layoutY="242.0" prefWidth="200.0" />
+                  <Label alignment="CENTER" layoutX="83.0" layoutY="254.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Flop" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x11" />
+                     </font>
+                     <textFill>
+                        <Color red="0.624" green="0.624" blue="0.624" fx:id="x21" />
+                     </textFill>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="427.0" prefWidth="200.0" />
+                  <Label alignment="CENTER" layoutX="83.0" layoutY="437.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Turn" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x111" />
+                     </font>
+                     <textFill>
+                        <Color red="0.624" green="0.624" blue="0.624" fx:id="x211" />
+                     </textFill>
+                  </Label>
+                  <Separator layoutX="13.0" layoutY="517.0" prefWidth="200.0" />
+                  <Label alignment="CENTER" layoutX="84.0" layoutY="520.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="River" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x1111" />
+                     </font>
+                     <textFill>
+                        <Color red="0.624" green="0.624" blue="0.624" fx:id="x2111" />
+                     </textFill>
+                  </Label>
+                  <ComboBox fx:id="ComboFlop1" layoutX="20.0" layoutY="293.0" prefHeight="26.0" prefWidth="187.0" promptText="Flop Card 1" />
+                  <ComboBox fx:id="ComboFlop2" layoutX="19.0" layoutY="335.0" prefHeight="26.0" prefWidth="187.0" promptText="Flop Card 2" />
+                  <ComboBox fx:id="ComboFlop3" layoutX="20.0" layoutY="375.0" prefHeight="26.0" prefWidth="187.0" promptText="Flop Card 3" />
+                  <ComboBox fx:id="ComboTurn" layoutX="21.0" layoutY="466.0" prefHeight="26.0" prefWidth="187.0" promptText="Turn Card " />
+                  <ComboBox fx:id="ComboRiver" layoutX="21.0" layoutY="550.0" prefHeight="26.0" prefWidth="187.0" promptText="River Card" />
+                  <Separator layoutX="15.0" layoutY="585.0" prefWidth="200.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane prefHeight="669.0" prefWidth="272.0">
+                    <children>
+                        <Label alignment="CENTER" font="$x1" layoutX="304.0" layoutY="14.0" style="&#10;" text="Mesa" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <ImageView fitHeight="486.0" fitWidth="810.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/ejemplo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="144.0" layoutY="219.0" prefHeight="133.0" prefWidth="86.0" text="Flop1Card" />
+                  <Label layoutX="230.0" layoutY="219.0" prefHeight="133.0" prefWidth="86.0" text="Flop2Card" />
+                  <Label layoutX="316.0" layoutY="224.0" prefHeight="126.0" prefWidth="86.0" text="Flop3Card" />
+                  <Label layoutX="418.0" layoutY="224.0" prefHeight="126.0" prefWidth="86.0" text="Turn Card" />
+                  <Label layoutX="512.0" layoutY="222.0" prefHeight="126.0" prefWidth="98.0" text="River Card" />
+                  <Label layoutX="153.0" layoutY="195.0" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #2a84df;" text="              Flop" textAlignment="CENTER" textFill="#fafafa">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="419.0" layoutY="195.0" style="-fx-background-color: #b208e4;" text="Turn" textFill="#fafafa">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="514.0" layoutY="195.0" style="-fx-background-color: #e42308;" text="River" textFill="#fafafa">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="79.0" layoutY="102.0" prefHeight="33.0" prefWidth="55.0" text="P1" textFill="#fafafa" />
+                  <Label layoutX="335.0" layoutY="86.0" text="P2" textFill="#fafafa" />
+                  <Label layoutX="588.0" layoutY="111.0" text="P3" textFill="#fafafa" />
+                  <Label layoutX="618.0" layoutY="395.0" text="P4" textFill="#fafafa" />
+                  <Label layoutX="327.0" layoutY="429.0" text="P5" textFill="#fafafa" />
+                  <Label layoutX="48.0" layoutY="395.0" text="P6" textFill="#fafafa" />
+                    </children>
+                </AnchorPane>
+                <ScrollPane prefHeight="669.0" prefWidth="601.0">
+                    <content>
+                        <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+                            <children>
+                                <Label alignment="CENTER" font="$x1" layoutX="74.0" layoutY="14.0" style="&#10;" text="Porcentajes" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Estado:" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                    <textFill>
+                        <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+                    </textFill>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                <Label font="$x3" maxWidth="-1.0" text="Version 0.01" textFill="$x4" HBox.hgrow="NEVER" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
