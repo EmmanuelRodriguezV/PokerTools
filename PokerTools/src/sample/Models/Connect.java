@@ -1,9 +1,8 @@
 package sample.Models;
 
-import java.sql.*;
+import  java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 public class Connect {
     ArrayList<RowsCards>cartas = new ArrayList<>();
 
@@ -22,23 +21,26 @@ public class Connect {
                valor = rs.getInt("OpenRaise");
 
         }
-        catch (SQLException exception){
+        catch (SQLException | ClassNotFoundException exception){
             exception.printStackTrace();
         }
         return  valor;
     }
 
-    private Connection connect() {
+    public Connection connect() throws ClassNotFoundException {
+        Class.forName("org.sqlite.JDBC");
         // SQLite connection string
         //String url = "jdbc:sqlite:/home/mybox/Downloads/untitled folder/SQLiteStudio/Pokerstates";
-        String url = "jdbc:sqlite:src/Database/Pokerstates";
-        Connection conn = null;
+      //  String url = "jdbc:sqlite:C:\\Users\\ema-s\\Desktop\\poker.db";
+        String url = "jdbc:sqlite:src\\Database\\poker.db";
+        Connection conn = null ;
         try {
-
             conn = DriverManager.getConnection(url);
-            System.out.println("conexion establecida");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(e.getErrorCode());
+
+
         }
         return conn;
     }
@@ -123,7 +125,7 @@ public class Connect {
                 }
             }
 
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }
         Cartas_enteras.add(row);
